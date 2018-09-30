@@ -1,5 +1,7 @@
 # Hivemind
 
+[![Build Status](https://travis-ci.com/RuItech/HiveMind.svg?branch=master)](https://travis-ci.com/RuItech/HiveMind)
+
 Hivemind is a Django Restful API.
 
 ## Installation
