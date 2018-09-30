@@ -17,8 +17,9 @@ setuptools.setup(
     install_requires=[
         'Django >= 2.0',
         'djangorestframework',
-        'django-filter',
-        'psycopg2'
+        'django-filter >= 2',
+        'django-phonenumber-field',
+        'psycopg2-binary'
         ],
     classifiers=[
         "Programming Language :: Python :: 3", "Framework :: Django :: 2"
