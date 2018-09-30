@@ -9,8 +9,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'hivemind',
-        'USER': '',
-        'PASSWORD': '',
+        'USER': 'ruitech',
+        'PASSWORD': 'ruitech',
         'HOST': 'localhost',
         'PORT': '',
     }

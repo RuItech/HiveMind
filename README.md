@@ -1,11 +1,27 @@
 # Hivemind
 
-Hivemind is a Django Restful API, it's the source of truth for all the other applications in this stack.
+[![Build Status](https://travis-ci.com/RuItech/HiveMind.svg?branch=master)](https://travis-ci.com/RuItech/HiveMind)
 
-It stores:
+Hivemind is a Django Restful API.
 
-- User Details i.e First Name, Last Names
-- Payment History
-- News & Events
+## Installation
 
-Hivemind is only accessible by the Software Stacks Maintainers.
+1. Launch Dedicated Virtual Environment for Hivemind (Virtual Environment should run on Python3.6).
+
+2. Install `pipenv`
+
+    ```code
+    pip install pipenv
+    ```
+
+3. Install Dev Packages
+
+    ```code
+    pipenv install --dev
+    ```
+
+4. OPTIONAL: Run Tests
+
+    ```code
+    python manage.py test
+    ```
