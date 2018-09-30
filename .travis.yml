@@ -1,0 +1,15 @@
+matrix:
+  include:
+    - language: python
+      python: 3.6
+install: 
+  - pip install pipenv
+before_script:
+  - mysql -e 'create database test;' -u root
+  - pipenv install --dev
+script:
+  - tox
+notifications:
+  email: false
+services:
+  - mysql
