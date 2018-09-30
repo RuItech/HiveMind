@@ -1,12 +1,9 @@
 """
 Tests for API Module Signals
 """
-from django.contrib.auth.models import User
-from django.db.models.signals import post_save
 from django.test import TestCase
 from model_mommy import mommy
 
-from hivemind.modules.api.signals import create_profile
 from hivemind.modules.api.models import Profile
 
 
@@ -14,13 +11,6 @@ class TestSignals(TestCase):
     """
     Test API Module Signals
     """
-
-    def setUp(self):
-        """
-        Set Up for Tests
-        """
-        post_save.connect(
-            create_profile, sender=User, dispatch_uid='create_profile')
 
     def test_user_creates_profile(self):
         """
