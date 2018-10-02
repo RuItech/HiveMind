@@ -39,10 +39,15 @@ class Event(models.Model):
         # and that the start_time occurs before the end_time.
         if self.start_time >= self.end_time:
             raise ValidationError({
-                'start_time': ValidationError('Start time should be before the end time.', code='invalid'),
-                'end_time': ValidationError('Start time should be before the end time.', code='invalid'),
+                'start_time': ValidationError(
+                    'Start time should be before the end time.', code='invalid'
+                ),
+                'end_time':   ValidationError(
+                    'Start time should be before the end time.', code='invalid'
+                ),
             })
 
+    # pylint: disable=too-few-public-methods
     class Meta:
         """
         Meta Options for the Event Class.
