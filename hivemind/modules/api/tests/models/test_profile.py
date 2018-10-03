@@ -14,7 +14,7 @@ class TestProfile(TestCase):
         """
         Test Student Profile String Representation.
 
-        Expected Representation Format: AD111365 - Raymond, Davis
+        Expected Representation Format: AD111365 - Dave Raymond
         """
 
         user = mommy.make(
