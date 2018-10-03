@@ -25,4 +25,4 @@ class TestProfile(TestCase):
         profile = user.profile
         profile.school_id = 'AD111365'
 
-        self.assertEqual(str(profile), 'AD111365 - Raymond, Dave')
+        self.assertEqual(str(profile), 'AD111365 - Dave Raymond')
