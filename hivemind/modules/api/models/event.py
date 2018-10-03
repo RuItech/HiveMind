@@ -28,6 +28,17 @@ class Event(models.Model):
         help_text='This is the time when the event ends.'
     )
 
+    created_date = models.DateTimeField(
+        'Created',
+        help_text='The date and time on which the event was created.',
+        auto_now_add=True
+    )
+    modified_date = models.DateTimeField(
+        'Modified',
+        help_text='The date and time on which the event was last modified.',
+        auto_now=True
+    )
+
     def __str__(self):
         """
         String representation for the Event Object
@@ -42,7 +53,7 @@ class Event(models.Model):
                 'start_time': ValidationError(
                     'Start time should be before the end time.', code='invalid'
                 ),
-                'end_time':   ValidationError(
+                'end_time': ValidationError(
                     'Start time should be before the end time.', code='invalid'
                 ),
             })
