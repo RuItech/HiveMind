@@ -4,8 +4,10 @@ Event Model for API Module
 from django.core.exceptions import ValidationError
 from django.db import models
 
+from hivemind.modules.api.models.base_model import BaseModel
 
-class Event(models.Model):
+
+class Event(BaseModel):
     """
     This is the Event Model.
     """
@@ -26,17 +28,6 @@ class Event(models.Model):
     end_time = models.DateTimeField(
         'End Time',
         help_text='This is the time when the event ends.'
-    )
-
-    created_date = models.DateTimeField(
-        'Created',
-        help_text='The date and time on which the event was created.',
-        auto_now_add=True
-    )
-    modified_date = models.DateTimeField(
-        'Modified',
-        help_text='The date and time on which the event was last modified.',
-        auto_now=True
     )
 
     def __str__(self):
