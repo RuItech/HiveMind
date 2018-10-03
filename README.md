@@ -38,3 +38,7 @@ Hivemind is a Django Restful API created with the purpose of simplifying Club Me
     ```code
     python manage.py test
     ```
+
+## Contibutions
+
+We welcome all contributions to the Repository. If you'd like to contribute to the Repository, read the [Contribution Guide](https://github.com/RuItech/HiveMind/blob/master/CONTRIBUTING.md) for steps on how to go about making your first Contribution.
