@@ -20,6 +20,12 @@ class Article(BaseModel):
         help_text='The contents of the article.',
     )
 
+    def __str__(self):
+        """
+        String representation for the Article Model.
+        """
+        return f"{self.headline}"
+
     # pylint: disable=too-few-public-methods
     class Meta:
         """
