@@ -64,7 +64,8 @@ class Profile(models.Model):
 
         ordering = ['id', 'school_id', 'last_name']
 
-    def get_full_name(self):
+    @property
+    def full_name(self):
         """
         Returns the full name of the person
         """
@@ -73,7 +74,8 @@ class Profile(models.Model):
 
         return f"{self.first_name} {self.last_name}"
 
-    def get_last_name(self):
+    @property
+    def formated_last_name(self):
         """
         Returns the last name of the person.
         """
@@ -82,17 +84,11 @@ class Profile(models.Model):
 
         return self.last_name
 
-    def get_first_name(self):
-        """
-        Returns the first name of the person.
-        """
-        return self.first_name
-
     def __str__(self):
         """
         String Representation for StudentProfile Object
         """
-        return f"{self.school_id} - {self.get_full_name()}"
+        return f"{self.school_id} - {self.full_name}"
 
 
 # pylint: disable=unused-argument
