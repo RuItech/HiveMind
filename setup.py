@@ -15,7 +15,7 @@ setuptools.setup(
     url="https://github.com/RuItech/HiveMind",
     packages=setuptools.find_packages(),
     install_requires=[
-        'Django >= 2.0',
+        'Django >= 2.1.2',
         'djangorestframework',
         'django-filter >= 2',
         'django-phonenumber-field',
