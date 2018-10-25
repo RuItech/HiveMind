@@ -4,7 +4,7 @@ Tests for API Module Signals
 
 from django.test import TestCase
 
-from hivemind.modules.api.models.article import Article
+from model_mommy import mommy
 
 
 class TestArticle(TestCase):
@@ -17,9 +17,10 @@ class TestArticle(TestCase):
         Expects that the headline is returned.
         """
 
-        article = Article(
-            headline='Test headline.',
-            content='Test content.',
+        article = mommy.make(
+            'api.Article',
+            headline='Test headline',
+            content='Test content.'
         )
 
-        self.assertEqual(str(article), 'Test headline.')
+        self.assertEqual(str(article), 'Test headline')
