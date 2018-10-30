@@ -23,6 +23,7 @@ class Payment(BaseModel):
         default="",
         help_text='Represent extra information related to Payment.')
 
+    # pylint: disable=too-few-public-methods
     class Meta():
         """
         Meta Options for Payment Model
@@ -33,4 +34,4 @@ class Payment(BaseModel):
         """
         String Representation for Payment Model
         """
-        return f"{self.payment_ref} - {self.created.date()}"
+        return self.payment_ref
