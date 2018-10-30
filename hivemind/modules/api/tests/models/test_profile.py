@@ -14,7 +14,7 @@ class TestProfile(TestCase):
         """
         Test Student Profile String Representation.
 
-        Expected Representation Format: AD111365 - Raymond, Davis
+        Expected Representation Format: AD111365 - Dave Raymond
         """
 
         user = mommy.make(
@@ -25,4 +25,4 @@ class TestProfile(TestCase):
         profile = user.profile
         profile.school_id = 'AD111365'
 
-        self.assertEqual(str(profile), 'AD111365 - Raymond, Dave')
+        self.assertEqual(str(profile), 'AD111365 - Dave Raymond')
