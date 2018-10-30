@@ -31,4 +31,4 @@ class Article(BaseModel):
         """
         Meta options for the Article Class.
         """
-        ordering = ['created_date', 'headline']
+        ordering = ['created', 'headline']
