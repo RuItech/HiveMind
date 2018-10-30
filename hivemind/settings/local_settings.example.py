@@ -7,7 +7,7 @@ the correct settings for your local environment.
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'hivemind',
         'USER': 'ruitech',
         'PASSWORD': 'ruitech',
