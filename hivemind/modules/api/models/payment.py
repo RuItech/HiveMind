@@ -11,7 +11,8 @@ class Payment(BaseModel):
     """
     Payment Model
     """
-    owner = models.ForeignKey(Profile, on_delete=models.SET_NULL)
+    owner = models.ForeignKey(
+        Profile, on_delete=models.SET_DEFAULT, default=None, null=True)
     payment_ref = models.CharField(
         'Payment Reference',
         max_length=50,
@@ -19,7 +20,7 @@ class Payment(BaseModel):
     extra_info = models.TextField(
         'Extra Info',
         blank=True,
-        default=None,
+        default="",
         help_text='Represent extra information related to Payment.')
 
     class Meta():
@@ -32,4 +33,4 @@ class Payment(BaseModel):
         """
         String Representation for Payment Model
         """
-        return f"{self.payment_ref} - {self.created}"
+        return f"{self.payment_ref} - {self.created.date()}"
